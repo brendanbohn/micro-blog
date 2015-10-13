@@ -17,13 +17,42 @@
     <!-- APPLICATION SCRIPTS -->
     <script src="base.js"></script>
   </head>
+
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h1>We're in good shape.</h1>
+
+  <div class="container">
+    <div class="row">
+
+<!-- HEADING -->
+
+      <div class="col-xs-6">
+        <h1>Micro<br>Blog</h1>
+      </div>
+
+<!-- POST INPUT -->
+
+      <div class="col-xs-6">
+        <form id="create-post-form">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Create a post" id="create-post">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit" id="create-post-btn">Post</button>
+            </span>
+          </div>
+        </form>
+
+<!-- POST LIST -->
+
+        <div id="post-list">
+          
+        </div>
+
+
         </div>
       </div>
     </div>
+  </div>
+
+    
   </body>
 </html>
