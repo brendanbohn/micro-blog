@@ -27,20 +27,26 @@ $(document).ready(function(){
 /* 	creates a button to clear posts after the first post is created 	*/
 
       if (numPosts===1) {
-      	$('#post-list').after('<button class="btn btn-default pull-right" id="clear-posts">Clear Posts</button>');
+      	$('#post-list').after('<button data-toggle="modal" data-target=".clear-modal-md" class="btn btn-default pull-right" id="clear-posts">Clear Posts</button>');
       }
 
   	}
 
-/*  gives the clear button function. Clears the posts, hides the clear button, and sets the number of posts back to 0   */
+  });
 
-    $('#clear-posts').click(function(e){
+/*  when the cancel button is clicked in the modal, the modal hides  */
+
+    $('#modal-cancel-button').click(function(e){
+      $('#model-clear').modal("hide");
+    });
+
+/*  gives the modal clear button function. Clears the posts, hides the clear button, and sets the number of posts back to 0, hides the modal   */
+
+    $('#modal-clear-button').click(function(e){
       $('#post-list').empty();
       $('#clear-posts').hide();
       numPosts = 0;
+      $('#model-clear').modal("hide");
     });
-
-  });
-
 
 });
